@@ -25,7 +25,10 @@ class MyWidget(QMainWindow):
         self.repaint()
 
     def draw_flag(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        r = random.randint(0, 255)
+        g = random.randint(0, 255)
+        b = random.randint(0, 255)
+        qp.setBrush(QColor(r, g, b))
         rad = random.randint(1, self.height())
         x = random.randint(1, self.height())
         y = random.randint(1, self.width())
